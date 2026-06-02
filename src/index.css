@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Quicksand:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: 'Quicksand', sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, #ffe4ef 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #ede4ff 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, #fff0e6 0%, transparent 50%),
+    #fdf6f9;
+  background-attachment: fixed;
+}
+.fade-in { animation: fadeIn .4s ease both; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px);} to {opacity:1; transform:none;} }
+.pop { animation: pop .3s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes pop { from { transform:scale(.9); opacity:0;} to {transform:scale(1); opacity:1;} }
+.float-heart { animation: floaty 3s ease-in-out infinite; }
+@keyframes floaty { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-4px);} }
